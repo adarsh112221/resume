@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  
+
+     <style>
+    
+      :root{
+        --section-color-blue:rgb(85, 85, 168);
+      }
+      #body-header {
+        background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
+        height: 65vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      /* horizontal list of nav section */
+      .horizontal-list {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+      }
+      .horizontal-list li {
+        display: inline-block;
+        margin: 0px 8px 0px 8px;
+        font-weight: 100;
+        font-size: 1.2rem;
+      }
+      #dropdown-section
+      {
+        display: inline-block;
+        width: 100%;
+      }
+      #dropdown-kahai
+      {
+        color: white;
+        position: relative;
+        left: 10%;
+        display: none;
+      }
+   
+     
+      .horizontal-list li a {
+        text-decoration: none;
+        color: aliceblue;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    
+     #dropdown-section li
+     {
+       text-align: left;
+       /* padding-right:20px ; */
+       font-size: 16px;
+       padding:0px 8px 2px 0px;
+      list-style-type: none;
+      margin:5%;
+     
+     }
+     #dropdown-section li:hover a
+     {
+       color: black;
+       text-decoration: underline;
+       transition:all  0.4s ease-in-out 0.1s;
+     }
+     #dropdown-section i:hover{
+       color: rgb(194, 185, 185);
+       /* text-decoration: underline; */
+       transition:all  0.2s ease-in-out ;
+     }
+     #dropdown-section {
+       display: block;
+       width: 10%;
+   
+     }
+
+     #dropdown-section ul
+     { 
+       
+       margin-top: 0%;
+       padding-left: 10px;
+       padding-top: 20px;
+       margin-right: 10%;
+       padding-right: 30px;
+
+       position:absolute;
+       z-index: 2;
+       background-color: grey;
+       left: 2%;
+       /* border:2px solid black; */
+       /* border-radius: 2px; */
+       box-shadow: 0 0 10px #474c4e;
+       display: none;
+       
+
+     }
+     #dropdown-section li a {
+       text-decoration: none;
+       color:white;
+       
+     }
+    
+
+      .horizontal-list li a {
+        text-decoration: none;
+        color: aliceblue;
+        text-transform: capitalize;
+      }
+      .nav-menu li a {
+        transition: color 0.5s, border 4s;
+      }
+    
+
+      .nav-menu li a:hover {
+        color: grey;
+        border-bottom: 2px solid grey;
+      }
+      .center-align {
+        text-align: center;
+      }
+      #social-icons {
+        margin-top: 20vh;
+        backdrop-filter: blur(6px);
+      }
+      #nameinmiddle {
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+        color: rgb(224, 222, 222);
+        font-weight: 700;
+        margin-bottom: 1.7rem;
+        text-transform: capitalize;
+      }
+      /* social media horizontal navigation section */
+      .social li {
+        display: inline-block;
+      }
+      .social img {
+        width: 0.8rem;
+        padding: 1rem;
+        background-color: rgb(214, 212, 212);
+        margin-top: -1.3rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        margin-left: 5px;
+      }
+      .social img:hover {
+        background-color: rgb(236, 190, 190);
+      }
+      /* about section */
+      #about {
+        height: auto;
+        width: 100%;
+        /* position: relative; */
+      }
+
+      #header-image-container {
+        height: 12rem;
+        width: 12rem;
+        margin: auto;
+        margin-top: -14vh;
+       /* position: absolute; */
+      }
+
+      #header-image-container img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+       
+      }
+      #about p {
+        font: 700;
+        font-size: 1.6rem;
+        width: 80%;
+        /* padding: 2rem 4rem 0rem 4rem; */
+        font-family: serif;
+        color: gray;
+        text-align: justify;
+      }
+      section:nth-child(2n) {
+        background-color: #efefef;
+      }
+      section:nth-child(2n + 1) {
+        background-color: white;
+      }
+      section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .skill-display {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+        height: auto;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+      }
+      .skill-progress {
+        background-color: lightgray;
+        /* border: 2px solid black; */
+        width: 11rem;
+        height: 2.2rem;
+        border-radius: 1rem;
+        margin: 20px;
+        box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+        overflow: hidden;
+      }
+      .skill-name
+      {
+        padding-top: 5px;
+        font-size: 20px;
+        font-weight: 600;
+      
+      }
+
+      .skill-name span {
+        font-size: 1rem;
+        color: rgb(255, 254, 254);
+         
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+      .skill-progress > div {
+        height: inherit;
+        /* border-radius: 0.8rem 0px 0px 0.8rem; */
+        
+
+        border: 2px 0px 0px 2px solid black;
+        box-shadow: 1px 1px 5px 2px #989882;
+        
+        /* vertical-align: middle; */
+      }
+      /* percentages */
+      /* .tpercent {
+        width: 20%;
+      }
+      .spercent {
+        width: 70%;
+      }
+      .epercent {
+        width: 80%;
+      }
+      .fpercent {
+        width: 50%;
+      }  */
+      /* color of percentages */
+      .lightblue {
+        background-color: rgb(79, 79, 172);
+      }
+      .green {
+        background-color: rgb(112, 150, 75);
+      }
+      .yellow {
+        background-color: rgb(143, 143, 74);
+      }
+      .purple {
+        background-color: rgb(156, 54, 156);
+      }
+      .orange {
+        background-color: rgb(207, 163, 80);
+      }
+      .pink {
+        background-color: rgb(209, 69, 93);
+      }
+      /* PORTFOLIO SECTION HEADING */
+      #portfolio h1 {
+        margin-top: 40px;
+      }
+      /* portfolio conatiner */
+      .portfolio-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 50px;
+        margin-bottom: 20px;
+        justify-content: space-evenly;
+        /* box-sizing: border-box; */
+      }
+      .portfolio-image-container {
+        max-width: 300px;
+        margin: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* overflow: hidden; */
+        position: relative;
+      }
+      .portfolio-image-container img {
+        height: 100%;
+        width: 100%;
+      }
+
+      #portfolio-details {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        color: transparent;
+        transition: all 0.5s cubic-bezier(0, 1.6, 0.54, 1.78);
+        height: 100%;
+        text-align: center;
+      }
+      .portfolio-image-container {
+        transition: all 0.5s cubic-bezier(0, 1.6, 0.54, 1.78);
+      }
+      .portfolio-image-container:hover {
+        box-shadow: 0 0 20px #74adc8;
+        transform: scale(1.1);
+      }
+      .portfolio-image-container:hover #portfolio-details {
+        background-color: #36333378;
+        color: white;
+      }
+
+      /*contact section*/
+      #contact {
+        background-image: linear-gradient(to top right, #2d4e96, #403066);
+      }
+      #details-container {
+        display: flex;
+        align-items: baseline;
+      }
+      #details {
+        width: 50%;
+      }
+      #address {
+        width: 35%;
+        color: white;
+        margin-left: 6%;
+        line-height: 1rem;
+      }
+      #details form {
+        margin-left: 20%;
+        margin-right: 10%;
+      }
+
+      /* setteling things*/
+      #details input,
+      textarea {
+        padding: 1rem;
+        background-color: inherit;
+        border: none;
+        color: rgb(255, 255, 255);
+        border-bottom: 2px solid white;
+        margin: 1rem;
+        width: 90%;
+        max-width: 90%;
+        font-size: 1rem;
+      }
+      #details button {
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        border: 2px solid white;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        margin-left: 35%;
+        color: white;
+        margin-top: 1rem;
+      }
+      #details button:hover {
+        background-color: white;
+        color: black;
+      }
+
+      input:focus,
+      button:focus,
+      textarea:focus {
+        outline: none;
+      }
+      /* adress wali chize */
+      #address h4 {
+        font-size: 1.4rem;
+      }
+      #address span {
+        font-size: 0.9rem;
+      }
+      .delhi {
+        padding: 5px;
+      }
+      .delhi i {
+        font-size: 0.8rem;
+      }
+      .contact-social a img {
+        height: 2rem;
+        color: white;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+      .contact-social a img:hover {
+        transform: scale(1.1);
+        background-color: white;
+        
+      }
+      .contact-social li {
+        display: inline-block;
+        padding: 10px;
+      }
+      section:target {
+        background-color: rgb(228, 236, 236);
+      }
+      /* experince section */
+
+      #expcontainer {
+        position: relative;
+        width: 75%;
+        /* border: 2px solid black */
+      }
+      .expcontent {
+        position: relative;
+        margin: 5px;
+        width: 40%;
+        min-height: 150px;
+        /* border: 2px solid black; */
+        text-align: right;
+        line-height: 0.1rem;
+        /* height: auto; */
+      }
+      .expcontent:nth-child(2n + 1) {
+        left: 53%;
+      }
+      .expcontent:nth-child(2n) {
+        left: 4%;  
+      }
+      .expcontent:nth-child(2n):after {
+        position: absolute;
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 30%;
+        right: -15%;
+        border-radius: 50%;
+        background-color: rgb(29, 17, 17);
+        z-index: 3;
+      }
+      .expcontent:nth-child(2n + 1):after {
+        position: absolute;
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 30%;
+        left: -9%;
+        border-radius: 50%;
+        background-color: rgb(116, 105, 105);
+        z-index: 3;
+      }
+      .dividingline {
+        position: absolute;
+        width: 0px;
+        height: 66%;
+        top: 13%;
+        left: 50%;
+        border-left: 3px dotted rgb(51, 173, 173);
+      }
+
+      .aero-container {
+        position: sticky;
+        /* left: 50%; */
+        top: 12%;
+        transform: rotate(90deg);
+        z-index: 5;
+        margin-top: -30px;
+      }
+      .aero-container i {
+        display: block;
+        font-size: 1.4rem;
+      }
+
+      .des {
+        font-size: 1.5rem;
+        color: rgb(41, 39, 139);
+        padding: 0px;
+        margin: 0px;
+      }
+      .com {
+        font-size: 1.2rem;
+        /* line-height: 0.5rem; */
+        color: coral;
+        
+      }
+      .dat {
+        font-size: 1rem;
+        /* line-height: 0.5rem; */
+        color: rgb(121, 114, 114);
+      
+      }
+      .expdetails {
+        font-size: 17px;
+        line-height: 15px;
+        color: rgb(119, 112, 112);
+        text-align: justify;
+      }
+      .expcontent img {
+        width: 40px;
+        display: inline-block;
+        position: absolute;
+        left: 2%;
+        top: 0%;
+        overflow: hidden;
+      }
+      @media screen and (max-width:786px)
+      {
+        html
+      {
+        font-size: 17px;
+      }
+        .expcontent {
+        position: relative;
+        margin: 5px;
+        width: 90%;
+        min-height: 150px;
+        /* border: 2px solid black; */
+        text-align: right;
+        line-height: 0.1rem;
+       
+        /* height: auto; */
+      }
+      .expcontent:nth-child(2n + 1) {
+        left: 4%;
+      }
+      .expcontent:nth-child(2n) {
+        left: 4%;  
+      }
+      .dividingline {
+        position: absolute;
+        width: 0px;
+        height: 66%;
+        top: 13%;
+        left: -6%;
+        border-left: 3px dotted rgb(51, 173, 173);
+      }
+      .expcontent:nth-child(2n):after {
+        position: absolute;
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 30%;
+        left: -13%;
+        border-radius: 50%;
+        background-color: rgb(29, 17, 17);
+        z-index: 3;
+      }
+      .expcontent:nth-child(2n + 1):after {
+        position: absolute;
+        content: "";
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 30%;
+        left: -13%;
+        border-radius: 50%;
+        background-color: rgb(116, 105, 105);
+        z-index: 3;
+      }
+      #details-container {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      #details {
+        width: 100%; 
+        margin-bottom: 10%;
+      }
+      #address {
+        width: 90%;
+        color: white;
+        /* margin-left: 6%; */
+        line-height: 1rem;
+       
+      }
+      #details input,
+      textarea {
+        padding: 0.5rem;
+        background-color: inherit;
+        border: none;
+        color: rgb(255, 255, 255);
+        border-bottom: 2px solid white;
+        margin: 1rem;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+      }
+      #details form {
+         margin-left: 2%;
+        margin-right: 12%;
+      }
+      #details button {
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        border: 2px solid white;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        margin-left: 43%;
+        color: white;
+        margin-top: 1rem;
+      }
+      }
+      @media screen and (max-width:660px)
+      {
+        html
+      {
+        font-size: 15px;
+      }
+      .social
+      {
+        padding-left: 0px;
+      }
+     
+      .horizontal-list li {
+        display: inline-block;
+        margin: 0px 8px 0px 8px;
+        font-weight: 100;
+        font-size: 1.2rem;
+        display: none;
+        
+      }
+     #dropdown-section ul
+     {
+       display: none;
+     }
+     #dropdown-section:hover ul
+     {
+       display: block;
+     }
+       #dropdown-kahai
+       {
+         display: inline-block;
+       }
+       #details button {
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        border: 2px solid white;
+        padding: 0.7rem 1rem 0.7rem 1rem;
+        margin-left: 44%;
+        color: white;
+        margin-top: 1rem;
+      }
+.contact-social
+{
+  padding-left: 0px;
+
+}
+.contact-social a img
+{
+  height: 1.3rem;
+  padding:5px;
+  margin: 5px;
+}
+#about p {
+        font: 700;
+        font-size: 1.4rem;
+        width: 80%;
+        /* padding: 2rem 4rem 0rem 4rem; */
+        font-family: serif;
+        color: gray;
+        text-align: justify;
+      }
+    
+      
+      }
+
+
+    </style> 
+  </head>
+  <body>
+    <header id="body-header">
+      <nav id="header-nav">
+        <ul class="horizontal-list center-align nav-menu">
+          <li class="nav-section">
+            <a   href="#">Home</a>
+          </li>
+          <li class="nav-section">
+            <a class="abbey1" href="#">About</a>
+          </li>
+          <li class="nav-section">
+            <a class="abbey1">Skills</a>
+          </li>
+          <li class="nav-section">
+            <a class="abbey1" >Experince</a>
+          </li>
+          <li class="nav-section">
+            <a  class="abbey1" >Education</a>
+          </li>
+          <li class="nav-section">
+            <a class="abbey1" >portfolio</a>
+          </li>
+          <li class="nav-section">
+            <a class="abbey1" >contact</a>
+          </li>
+        </ul>
+         </nav>
+        <div id="dropdown-section">
+          <i id="dropdown-kahai" class="fas fa-bars"> </i>
+          <div>
+            <ul id="dropdown-show">
+              <li>
+                <a class="abbey1" href="#">Home</a>
+              </li>
+              <li >
+                <a class="abbey1" href="#">About</a>
+              </li>
+              <li>
+                <a class="abbey1" href="#skills">Skills</a>
+              </li>
+              <li>
+                <a class="abbey1" href="#experince">Experince</a>
+              </li>
+              <li >
+                <a class="abbey1" href="#education">Education</a>
+              </li>
+              <li >
+                <a class="abbey1" href="#portfolio">Portfolio</a>
+              </li>
+              
+              <li >
+                <a class="abbey1" href="#contact">Contact</a>
+              </li>
+              </ul>
+            </div>
+   
+          </div>
+        
+      
+     
+
+      <nav id="social-icons">
+        <ul class="social center-align">
+          <h1 id="nameinmiddle">adarsh pandey</h1>
+          <li>
+            <a href=""><img src="images/facebook-logo.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="images/google-plus-social-logotype.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img
+                src="images/instagram-social-network-logo-of-photo-camera.png"
+                alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/linkedin-logo.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="images/spotify-logo.png" alt="" /></a>
+          </li>
+        
+          
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section  class="abbey" id="about">
+        <div id="header-image-container">
+          <img src="images/macimage.jpg" />
+        </div>
+        <p>
+        I am a second year mechanical enginnering student styding at abes engineering college Ghaziabad
+        I have good command on HTML,CSS,JAVASCRIPT,and a littlebit of reactjs as well i am loooking for a good intership opportunity 
+          <span class="acchi-skills">I wanted to be a Full Stack developer and hardly working towords that</span> 
+        this is just a dummy project that i have made
+    
+        </p>
+      </section>
+      <section  class="abbey" id="skills">
+        <h1
+          style="
+            font-size: 2.3rem;
+            color:  var(--section-color-blue);
+            font-weight: 550;
+            margin: 3rem;
+            margin-bottom: 5rem;
+          ">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>SKILLS</span>
+        </h1>
+        <div id="skill-dis" class="skill-display">
+          <div class="skill-progress">
+            <div data-percentage="20" class="skill tpercent lightblue">
+              <div class="skill-name"><span>OOPS</span></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div data-percentage="40" class="skill fpercent green">
+              <div class="skill-name"><span>C++</span></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div data-percentage="20" class="skill tpercent yellow">
+              <div class="skill-name"><span>MONGODB</span></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div data-percentage="80" class="skill epercent pink">
+              <div class="skill-name"><span>CSS</span></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div data-percentage="70" class="skill spercent purple">
+              <div class="skill-name"><span>HTML</span></div>
+            </div>
+          </div>
+          <div class="skill-progress">
+            <div data-percentage="40" class="skill fpercent orange">
+              <div class="skill-name"><span>JAVASCRIPT</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="abbey"  id="experince">
+        <h1
+          style="font-size: 2.3rem; color: var(--section-color-blue); font-weight: 550"
+        >
+          <i class="fas fa-th-list"></i>
+          <span>EXPERINCE</span>
+        </h1>
+
+        <div id="expcontainer">
+          <div class="dividingline">
+            <div class="aero-container">
+              <i
+                style="font-size: 1.8rem; color: rgb(67, 67, 172)"
+                id="aeroplane"
+                class="fas fa-plane"
+              ></i>
+            </div>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/cnlogo.png" alt="" />
+              <h3 class="des">Designation</h3>
+              <h3 class="com">Company name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/cnlogo.png" alt="" />
+              <h3 class="des">Designation</h3>
+              <h3 class="com">Company name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/cnlogo.png" alt="" />
+              <h3 class="des">Designation</h3>
+              <h3 class="com">Company name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section  class="abbey" id="education">
+        <h1
+          style="font-size: 2.3rem; color: var(--section-color-blue); font-weight: 550"
+        >
+          <i class="fas fa-graduation-cap"></i>
+          <span>EDUCATION</span>
+        </h1>
+
+        <div id="expcontainer">
+          <div class="dividingline">
+            <div class="aero-container">
+              <i
+                style="font-size: 1.8rem; color: rgb(67, 67, 172)"
+                id="aeroplane"
+                class="fas fa-car-side"
+              ></i>
+            </div>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/ABESLOGO.png" alt="" />
+              <h3 class="des">Degree</h3>
+              <h3 class="com">Institute name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/ABESLOGO.png" alt="" />
+              <h3 class="des">Degree</h3>
+              <h3 class="com">Institute name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+          <div class="expcontent">
+            <div class="acchacontent">
+              <img src="images/ABESLOGO.png" alt="" />
+              <h3 class="des">Degree</h3>
+              <h3 class="com">Institute name</h3>
+              <h3 class="dat">Date</h3>
+            </div>
+            <p class="expdetails">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+              corrupti voluptatem alias? Odio cum et ipsam porro quidem
+              voluptas. Nobis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Harum dolorem laboriosam voluptates voluptate.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="abbey"  id="portfolio">
+        <h1
+          style="font-size: 2.3rem; color: var(--section-color-blue); font-weight: 550"
+        >
+          <i class="fas fa-th-list"></i>
+          <span>PORTFOLIO</span>
+        </h1>
+        <div class="portfolio-container">
+          <div class="portfolio-image-container">
+            <img src="images/a.png" alt="" />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+                sapiente.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img
+              src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000028_1550237365_tree.jpeg"
+            />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo, dicta?
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img
+              src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+            />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+                sapiente.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img
+              src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000029_1550237386_project.jpeg"
+            />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+                sapiente.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img
+              src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000027_1550237355_project_3.png"
+            />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+                sapiente.
+              </p>
+            </div>
+          </div>
+          <div class="portfolio-image-container">
+            <img
+              src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000026_1550237353_project_2.jpeg"
+            />
+            <div id="portfolio-details">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste,
+                sapiente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section  class="abbey" id="contact">
+        <h1 style="font-size: 2.2rem; font-weight: 550">
+          <i style="color: white" class="far fa-address-card"></i>
+          <span id="headingholder" style="color: white">CONTACT</span>
+        </h1>
+        <div id="details-container">
+          <div id="details">
+            <form action="">
+              <input type="text" placeholder="Your Name" /> <br />
+              <input type="text" placeholder="Your Email" /> <br />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="1"
+                placeholder="Message"
+              ></textarea>
+              <br />
+              <button>Send Message</button>
+            </form>
+          </div>
+          <div id="address">
+            <h4>Get In Touch</h4>
+            <span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium vero beatae officia eos illo adipisci culpa excepturi
+              blanditiis nam magnam! Vitae ea saepe ad porro mollitia
+              reprehenderit soluta repellat necessitatibus.</span
+            >
+            <h4>Address</h4>
+            <div class="delhi">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Delhi,India</span>
+            </div>
+            <div class="delhi">
+              <i class="fas fa-mobile-alt"></i>
+              <span>6666666666</span>
+            </div>
+            <div class="delhi">
+              <i class="far fa-envelope"></i>
+              <span>adarshpandey11222@gmail</span>
+            </div>
+          </div>
+        </div>
+
+        <nav id="contact-social-icons">
+          <ul class="contact-social center-align">
+            <li>
+              <a href=""><img src="images/facebook-logo.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="images/google-plus-social-logotype.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="images/instagram-social-network-logo-of-photo-camera.png"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/linkedin-logo.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/spotify-logo.png" alt="" /></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <script src="js.js">
+ 
+      </script>
+  </body>
+</html>
